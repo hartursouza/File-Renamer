@@ -89,7 +89,7 @@ python main.py
 🏗️ Passo 6 — Gerar o executável (PyInstaller)
 
 ```
-python -m PyInstaller --onedir --noconsole ^
+python -m PyInstaller --onefile --noconsole ^
 --icon=resources/rename.ico ^
 --add-binary "resources/libzbar-64.dll;." ^
 --add-binary "resources/libiconv.dll;." ^
