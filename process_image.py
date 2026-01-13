@@ -22,7 +22,7 @@ def process_image(image_path: str) -> str | None:
 
     # Padrão da chave CT-e (44 dígitos)
     cte_pattern = re.compile(
-        r"(11|12|13|14|15|16|17|21|22|23|24|25|26|27|28|29|31|32|33|35|41|42|43|50|51|52|53)\d{42}"
+        r"(11|12|13|14|15|16|17|21|22|23|24|25|26|27|28|29|31|32|33|35|41|42|43|50|51|52|53|99)\d{42}"
     )
 
     for barcode in barcodes:
