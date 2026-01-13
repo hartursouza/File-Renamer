@@ -30,27 +30,6 @@ Este projeto lê imagens de **CT-e**, extrai a **chave de acesso (44 dígitos)**
 
 ---
 
-## 📦 Estrutura do Projeto
-
-fileRenamer/
-│
-├── main.py
-├── process_image.py
-├── desktop_path.py
-├── error_message_box.py
-├── file_utils.py
-│
-├── resources/
-│ ├── rename.ico
-│ ├── libzbar-64.dll
-│ └── libiconv.dll
-│
-├── requirements.txt
-├── README.md
-└── .gitignore
-
----
-
 ## 📄 requirements.txt
 
 ```txt
@@ -62,26 +41,36 @@ pyinstaller
 
 🚀 Passo 1 — Clonar o projeto
 
+```
 git clone https://github.com/SEU_USUARIO/fileRenamer.git
 cd fileRenamer
+```
 
 🐍 Passo 2 — Criar ambiente virtual
 
+```
 python -m venv venv
+```
 
 Ativar o ambiente:
 
 # Windows (PowerShell)
 
+```
 venv\Scripts\Activate
+```
 
 Caso o PowerShell bloqueie scripts:
 
+```
 Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+```
 
 📚 Passo 3 — Instalar dependências
 
+```
 pip install -r requirements.txt
+```
 
 📂 Passo 4 — Criar a pasta scanner
 
@@ -93,7 +82,9 @@ pip install -r requirements.txt
 
 Passo 5 — Executar em modo desenvolvimento
 
+```
 python main.py
+```
 
 🏗️ Passo 6 — Gerar o executável (PyInstaller)
 
@@ -105,18 +96,4 @@ python -m PyInstaller --onedir --noconsole ^
 main.py
 ```
 
-📁 Passo 7 — Arquivos gerados
-
-Após o build:
-
-dist/
-└── main/
-├── main.exe
-├── libzbar-64.dll
-├── libiconv.dll
-├── python311.dll
-├── cv2/
-├── pyzbar/
-└── \_internal/
-
-Copie toda a pasta para usar em outros computadores.
+Agora você pode compartilhar o executável.
