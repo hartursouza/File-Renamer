@@ -2,6 +2,7 @@ import os
 from desktop_path import get_desktop_path
 from process_image import process_image
 from error_message_box import show_error
+from file_utils import get_unique_filename
 
 
 def main():
@@ -23,12 +24,15 @@ def main():
 
         key = process_image(image_path)
 
-        if key:
-            new_name = f"{key}.jpg"
-            new_path = os.path.join(scanner_folder, new_name)
+        if not key:
+            continue
 
-            if not os.path.exists(new_path):
-                os.rename(image_path, new_path)
+        new_filename = f"{key}.jpg"
+        unique_filename = get_unique_filename(scanner_folder, new_filename)
+
+        new_path = os.path.join(scanner_folder, unique_filename)
+
+        os.rename(image_path, new_path)
 
 
 if __name__ == "__main__":
